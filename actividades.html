@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explora los sonidos del Reino de Corona y el interior de la Torre Escondida.">
+    <title>Turismo en Corona - Actividades</title>
+    <link rel="icon" type="image/x-icon" href="./images/icono.svg">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <a class="saltar-contenido" href="#contenido-principal">Saltar al contenido principal</a>
+
+    <header class="encabezado-sitio">
+        <nav aria-label="Menú principal" class="nav-principal">
+            <ul class="nav-lista">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="actividades.html" aria-current="page">Actividades</a></li>
+                <li><a href="postales.html">Enviar Postal</a></li>
+            </ul>
+            <div class="nav-marca" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" focusable="false">
+                    <path d="m8 3 4 8 5-5 5 15H2L8 3z" />
+                </svg>
+                <span>Turismo en Corona</span>
+            </div>
+        </nav>
+    </header>
+
+    <section class="seccion-portada portada-secundaria" aria-label="Portada de actividades">
+        <div class="portada-superposicion">
+            <h1 class="portada-titulo">Actividades y Experiencias</h1>
+        </div>
+        <img src="images/actividades.png" alt="Panorámica de una calle de Corona adornada con banderines morados."
+            class="portada-imagen">
+    </section>
+
+    <main id="contenido-principal" class="contenedor-global">
+
+        <section class="seccion-introduccion-actividades">
+            <h2 class="titulo-seccion">Experiencias sensoriales</h2>
+            <p>Sumérgete en la atmósfera de nuestro reino. Aquí puedes experimentar los sonidos de la ciudad y el
+                interior de la Torre Escondida, dos de las experiencias más emblemáticas que hacen del Reino
+                de Corona un lugar único en el mundo.</p>
+        </section>
+
+        <div class="cuadricula-multimedia">
+
+            <section class="tarjeta-multimedia" aria-labelledby="musica-titulo">
+                <div class="tarjeta-cuerpo">
+                    <h3 id="musica-titulo">Ambiente Sonoro de la Ciudad</h3>
+                    <p>Escucha el bullicio alegre de nuestra plaza central, donde la vida nunca se detiene.</p>
+                    <div class="control-multimedia">
+                        <audio controls aria-describedby="desc-audio">
+                            <source src="audio/audio_sonidoAmbiente.mp3" type="audio/mpeg">
+                            Tu navegador no soporta el elemento de audio. Puedes <a
+                                href="audio/audio_sonidoAmbiente.mp3">descargar el archivo de audio</a>.
+                        </audio>
+                        <p id="desc-audio" class="texto-apoyo"><strong>Nota:</strong> Grabación de
+                            ambiente que incluye risas populares, sonidos de artesanos y mercaderes en la plaza central.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="tarjeta-multimedia" aria-labelledby="video-titulo">
+                <div class="tarjeta-cuerpo">
+                    <h3 id="video-titulo">Vídeo Tour del Interior de la Torre Escondida</h3>
+                    <p>Un recorrido detallado por la arquitectura interior de la torre.</p>
+                    <div class="envoltorio-video">
+                        <video controls poster="images/Torre.png" aria-describedby="desc-video">
+                            <source src="video/video_tourLaTorre.mp4" type="video/mp4">
+                            <track kind="captions" src="subs/es.vtt" srclang="es" label="Español" default>
+                            Tu navegador no soporta el elemento de vídeo. Puedes <a
+                                href="video/video_tourLaTorre.mp4">descargar el vídeo</a>.
+                        </video>
+                    </div>
+                    <details class="transcripcion">
+                        <summary>Transcripción del vídeo</summary>
+                        <div class="transcripcion-contenido">
+                            <p>El vídeo muestra el interior de la Torre Escondida. Las paredes, cubiertas de
+                                delicadas pinturas hechas a mano, representan escenas del bosque, animales y
+                                paisajes. La arquitectura combina piedra tallada con elegantes arcos de madera,
+                                creando un contraste cálido y rústico. La luz natural se filtra suavemente,
+                                iluminando rincones decorados con flores, libros y pequeños objetos que reflejan la
+                                creatividad y el paso del tiempo. Todo el ambiente transmite una sensación de calma,
+                                aislamiento y magia, como si fuera un refugio secreto suspendido entre la realidad y
+                                el cuento.</p>
+                        </div>
+                    </details>
+                    <p id="desc-video" class="texto-apoyo"><em><strong>Nota:</strong> Vídeo puramente visual acompañado
+                            de música ambiental (sin diálogos).</em></p>
+                </div>
+            </section>
+
+        </div>
+
+    </main>
+
+    <footer class="pie-sitio" aria-label="Pie de página">
+        <div class="pie-interior">
+            <div class="columna-info">
+                <p class="pie-marca">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" aria-hidden="true" focusable="false">
+                        <path d="m8 3 4 8 5-5 5 15H2L8 3z" />
+                    </svg>
+                    Turismo en Corona
+                </p>
+                <p class="pie-copyright">Descubre la magia del reino.<br>Turismo oficial 2026.</p>
+                <a href="https://www.w3.org/WAI/WCAG2AA-Conformance" title="Explanation of WCAG 2 Level AA conformance">
+                    <img height="31" width="88" src="https://www.w3.org/WAI/WCAG22/wcag2.2AA" alt="Level AA conformance,
+            W3C Web Content Accessibility Guidelines 2.2">
+                </a>
+            </div>
+            <nav aria-label="Información legal">
+                <p class="pie-titulo-columna">Legal</p>
+                <ul class="pie-enlaces">
+                    <li><a href="#">Política de privacidad</a></li>
+                    <li><a href="#">Términos del servicio</a></li>
+                    <li><a href="#">Política de reembolso</a></li>
+                </ul>
+            </nav>
+            <nav aria-label="Recursos del sitio">
+                <p class="pie-titulo-columna">Recursos</p>
+                <ul class="pie-enlaces">
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Guías</a></li>
+                    <li><a href="#">Preguntas frecuentes</a></li>
+                </ul>
+            </nav>
+        </div>
+        <hr class="pie-separador" aria-hidden="true">
+        <div class="pie-inferior">
+            <p class="pie-inferior-texto">© 2026 Turismo en Corona. Todos los derechos reservados.</p>
+            <div class="pie-inferior-enlaces">
+                <a href="#">Privacidad</a>
+                <a href="#">Cookies</a>
+                <a href="#">Accesibilidad</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

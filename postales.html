@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Personaliza y envía una postal virtual del Reino de Corona.">
+    <title>Turismo en Corona - Postales</title>
+    <link rel="icon" type="image/x-icon" href="./images/icono.svg">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <a class="saltar-contenido" href="#contenido-principal">Saltar al contenido principal</a>
+
+    <header class="encabezado-sitio">
+        <nav aria-label="Menú principal" class="nav-principal">
+            <ul class="nav-lista">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="actividades.html">Actividades</a></li>
+                <li><a href="postales.html" aria-current="page">Enviar Postal</a></li>
+            </ul>
+            <div class="nav-marca" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" focusable="false">
+                    <path d="m8 3 4 8 5-5 5 15H2L8 3z" />
+                </svg>
+                <span>Turismo en Corona</span>
+            </div>
+        </nav>
+    </header>
+
+    <section class="seccion-portada portada-secundaria" aria-label="Portada de enviar postales">
+        <div class="portada-superposicion">
+            <h1 class="portada-titulo">Enviar Postales</h1>
+        </div>
+        <img src="images/postales.png" alt="Panorámica de una persona escribiendo una postal." class="portada-imagen">
+    </section>
+
+    <main id="contenido-principal" class="contenedor-global">
+
+        <section class="seccion-introduccion-formulario">
+            <h2 class="titulo-seccion">Envía tu postal</h2>
+            <p>Elige una de nuestras imágenes exclusivas del reino, escribe un mensaje y comparte la magia de Corona.
+            </p>
+        </section>
+
+        <form action="#" method="post" class="formulario-postal" novalidate id="form-postal">
+
+            <fieldset class="grupo-postales">
+                <legend class="titulo-fieldset">1. Elige tu postal</legend>
+                <div class="cuadricula-postales">
+                    <div class="opcion-postal">
+                        <input type="radio" id="p1" name="postal" value="reino" checked>
+                        <label for="p1">
+                            <img src="images/postal_reinoDeCorona.png"
+                                alt="Festival de faroles en el Reino de Corona con el castillo al fondo.">
+                            <span>Festival de Faroles en Corona</span>
+                        </label>
+                    </div>
+                    <div class="opcion-postal">
+                        <input type="radio" id="p2" name="postal" value="bar">
+                        <label for="p2">
+                            <img src="images/postal_barElPatitoFrito.png"
+                                alt="Exteriores del bar El Patito Frito con su fachada colorida.">
+                            <span>Bar El Patito Frito</span>
+                        </label>
+                    </div>
+                    <div class="opcion-postal">
+                        <input type="radio" id="p3" name="postal" value="barca">
+                        <label for="p3">
+                            <img src="images/postal_barcaLagoDeCorona.png"
+                                alt="Barca con farolillos encendidos navegando por el lago de Corona.">
+                            <span>Barca en el Lago de Corona</span>
+                        </label>
+                    </div>
+                    <div class="opcion-postal">
+                        <input type="radio" id="p4" name="postal" value="lago">
+                        <label for="p4">
+                            <img src="images/postal_lagoDeCorona.png"
+                                alt="Vista nocturna del lago de Corona durante el festival de faroles.">
+                            <span>Noche en el Lago de Corona</span>
+                        </label>
+                    </div>
+                    <div class="opcion-postal">
+                        <input type="radio" id="p5" name="postal" value="bosque">
+                        <label for="p5">
+                            <img src="images/postal_elBosqueSinRetorno.png"
+                                alt="Vistas del Bosque Sin Retorno con árboles centenarios.">
+                            <span>El Bosque Sin Retorno</span>
+                        </label>
+                    </div>
+                    <div class="opcion-postal">
+                        <input type="radio" id="p6" name="postal" value="torre">
+                        <label for="p6">
+                            <img src="images/postal_torre.png" alt="La torre oculta asomando entre las montañas.">
+                            <span>La Torre Escondida</span>
+                        </label>
+                    </div>
+                    <div class="opcion-postal">
+                        <input type="radio" id="p7" name="postal" value="pueblo">
+                        <label for="p7">
+                            <img src="images/postal_calleDeCorona.png"
+                                alt="Calles del pueblo decoradas con banderines morados.">
+                            <span>Calles de Corona</span>
+                        </label>
+                    </div>
+                    <div class="opcion-postal">
+                        <input type="radio" id="p8" name="postal" value="salon">
+                        <label for="p8">
+                            <img src="images/postal_salonDeLaTorre.png"
+                                alt="Salón interior de la torre con pinturas murales y mobiliario.">
+                            <span>Salón de la Torre</span>
+                        </label>
+                    </div>
+                </div>
+            </fieldset>
+
+            <fieldset class="datos-destinatario">
+                <legend class="titulo-fieldset">2. Detalles del envío</legend>
+                <div class="campo">
+                    <label for="correo">Correo del destinatario (obligatorio):</label>
+                    <input type="email" id="correo" name="correo" required placeholder="Ej: rapunzel@reino.com"
+                        autocomplete="email" aria-describedby="error-correo" aria-invalid="false">
+                    <span id="error-correo" class="mensaje-error" role="alert" aria-live="polite"></span>
+                </div>
+                <div class="campo">
+                    <label for="nombre">Nombre del destinatario (obligatorio):</label>
+                    <input type="text" id="nombre" name="nombre" required placeholder="Ej: Rapunzel" autocomplete="name"
+                        aria-describedby="error-nombre" aria-invalid="false">
+                    <span id="error-nombre" class="mensaje-error" role="alert" aria-live="polite"></span>
+                </div>
+                <div class="campo">
+                    <label for="mensaje">Tu mensaje personal (obligatorio):</label>
+                    <textarea id="mensaje" name="mensaje" rows="5" required placeholder="Escribe aquí tu mensaje..."
+                        aria-describedby="error-mensaje" aria-invalid="false"></textarea>
+                    <span id="error-mensaje" class="mensaje-error" role="alert" aria-live="polite"></span>
+                </div>
+            </fieldset>
+
+            <div class="contenedor-boton">
+                <button type="submit" class="boton-enviar">Enviar Postal</button>
+            </div>
+
+        </form>
+
+    </main>
+
+    <footer class="pie-sitio" aria-label="Pie de página">
+        <div class="pie-interior">
+            <div class="columna-info">
+                <p class="pie-marca">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" aria-hidden="true" focusable="false">
+                        <path d="m8 3 4 8 5-5 5 15H2L8 3z" />
+                    </svg>
+                    Turismo en Corona
+                </p>
+                <p class="pie-copyright">Descubre la magia del reino.<br>Turismo oficial 2026.</p>
+                <a href="https://www.w3.org/WAI/WCAG2AA-Conformance" title="Explanation of WCAG 2 Level AA conformance">
+                    <img height="31" width="88" src="https://www.w3.org/WAI/WCAG22/wcag2.2AA" alt="Level AA conformance,
+            W3C Web Content Accessibility Guidelines 2.2">
+                </a>
+            </div>
+            <nav aria-label="Información legal">
+                <p class="pie-titulo-columna">Legal</p>
+                <ul class="pie-enlaces">
+                    <li><a href="#">Política de privacidad</a></li>
+                    <li><a href="#">Términos del servicio</a></li>
+                    <li><a href="#">Política de reembolso</a></li>
+                </ul>
+            </nav>
+            <nav aria-label="Recursos del sitio">
+                <p class="pie-titulo-columna">Recursos</p>
+                <ul class="pie-enlaces">
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Guías</a></li>
+                    <li><a href="#">Preguntas frecuentes</a></li>
+                </ul>
+            </nav>
+        </div>
+        <hr class="pie-separador" aria-hidden="true">
+        <div class="pie-inferior">
+            <p class="pie-inferior-texto">© 2026 Turismo en Corona. Todos los derechos reservados.</p>
+            <div class="pie-inferior-enlaces">
+                <a href="#">Privacidad</a>
+                <a href="#">Cookies</a>
+                <a href="#">Accesibilidad</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="validacion.js"></script>
+
+</body>
+
+</html>
