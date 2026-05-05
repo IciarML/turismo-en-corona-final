@@ -25,8 +25,14 @@ document.getElementById('form-postal').addEventListener('submit', function (e) {
     });
 
     if (!valido) {
-        e.preventDefault();
-        if (primerError) primerError.focus();
+        if (!valido) {
+            e.preventDefault();
+            if (primerError) primerError.focus();
+        } else {
+            e.preventDefault();
+            alert("¡Postal enviada con éxito! Gracias por compartir la magia de Corona.");
+            window.location.href = "postales.html";
+        }
     }
 
 });
