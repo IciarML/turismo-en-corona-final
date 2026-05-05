@@ -339,6 +339,17 @@ fieldset {
     box-shadow: 0 0 5px rgba(75, 44, 109, 0.3);
 }
 
+.campo input::placeholder,
+.campo textarea::placeholder {
+    color: #444444;
+    opacity: 1;
+}
+
+.campo input:focus::placeholder,
+.campo textarea:focus::placeholder {
+    color: #4b2c6d;
+}
+
 .mensaje-error {
     display: block;
     color: #b91c1c;
